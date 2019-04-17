@@ -1,0 +1,7 @@
+C:\Users\Shakthi\Documents\DutchTreat\DutchTreat\obj\Debug\netcoreapp2.1\DutchTreat.csproj.CoreCompileInputs.cache
+C:\Users\Shakthi\Documents\DutchTreat\DutchTreat\obj\Debug\netcoreapp2.1\DutchTreat.RazorAssemblyInfo.cache
+C:\Users\Shakthi\Documents\DutchTreat\DutchTreat\obj\Debug\netcoreapp2.1\DutchTreat.RazorAssemblyInfo.cs
+C:\Users\Shakthi\Documents\DutchTreat\DutchTreat\obj\Debug\netcoreapp2.1\DutchTreat.AssemblyInfoInputs.cache
+C:\Users\Shakthi\Documents\DutchTreat\DutchTreat\obj\Debug\netcoreapp2.1\DutchTreat.AssemblyInfo.cs
+C:\Users\Shakthi\Documents\DutchTreat\DutchTreat\obj\Debug\netcoreapp2.1\DutchTreat.dll
+C:\Users\Shakthi\Documents\DutchTreat\DutchTreat\obj\Debug\netcoreapp2.1\DutchTreat.pdb
