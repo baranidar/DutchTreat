@@ -61,8 +61,9 @@ namespace DutchTreat.Controllers
             //    .OrderBy(p => p.Category)
             //    .ToList();
 
-            var results = _repository.GetAllProducts();
-            return View(results);
+            //var results = _repository.GetAllProducts();
+            //return View(results);
+            return View();
         }
 
     }
