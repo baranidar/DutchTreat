@@ -17,6 +17,7 @@
  </ItemGroup>
 
  <ItemGroup>
+   <None Remove="ClientApp\app\shop\cart.component.html" />
    <None Remove="ClientApp\app\shop\productList.component.css" />
    <None Remove="ClientApp\app\shop\productList.component.html" />
  </ItemGroup>
@@ -24,6 +25,7 @@
  <ItemGroup>
    <Content Include="ClientApp\app\app.component.html" />
    <Content Include="ClientApp\app\shop\productList.component.html" />
+   <Content Include="ClientApp\app\shop\cart.component.html" />
    <Content Include="ClientApp\app\shop\productList.component.css">
      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
    </Content>

@@ -8,11 +8,13 @@ import { AppComponent } from './app.component';
 //import { APP_BASE_HREF } from '@angular/common';
 import { productListComponent } from './shop/productList.component';
 import { DataService } from './shared/dataService';
+import { cartComponent } from './shop/cart.component';
 
 @NgModule({
   declarations: [
       AppComponent,
-      productListComponent
+      productListComponent,
+      cartComponent
   ],
   imports: [
     BrowserModule,

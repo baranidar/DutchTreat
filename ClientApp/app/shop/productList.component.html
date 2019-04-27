@@ -5,12 +5,12 @@
             <img src="/img/{{ p.artId }}.jpg" class="img-fluid" [alt]="p.title" />
             <h3>{{ p.category }} - {{ p.size }}</h3>
             <ul class="product-props list-unstyled">
-                <li><strong>Price</strong>: {{ p.price | currency:"USD":true }}</li>
+                <li><strong>Price</strong>: {{ p.price | currency:"USD":symbol }}</li>
                 <li><strong>Artist</strong>: {{ p.artist }}</li>
                 <li><strong>Title</strong>: {{ p.title }}</li>
                 <li><strong>Description</strong>: {{ p.artDescription }}</li>
             </ul>
-            <button id="buyButton" class="btn btn-success">Buy</button>
+            <button id="buyButton" class="btn btn-success btn-sm pull-right" (click)="addProduct(p)">Buy</button>
         </div>
     </div>
 
