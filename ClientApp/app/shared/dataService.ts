@@ -42,6 +42,16 @@ export class DataService {
         }));
     }
 
+    public checkout() {
+        return this.http.post("/api/orders", this.order)
+            .pipe(
+            map(response => {
+                this.order = new OrderNS.Order();
+                return true;
+            })
+            )
+    }
+
     public addToOrder(newProduct: Product) {
 
         
