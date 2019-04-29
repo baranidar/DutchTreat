@@ -13,10 +13,13 @@ import { cartComponent } from './shop/cart.component';
 import { RouterModule } from '@angular/router';
 import { shopComponent } from './shop/shop.component';
 import { Checkout } from './checkout/checkout.component';
+import { loginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 
 let routes = [
     { path: "", component: shopComponent },
-    { path: "checkout", component: Checkout }
+    { path: "checkout", component: Checkout },
+    { path: "login", component: loginComponent}
 
 ];
 
@@ -26,7 +29,8 @@ let routes = [
       productListComponent,
       cartComponent,
       shopComponent,
-      Checkout
+      Checkout,
+      loginComponent
   ],
   imports: [
     BrowserModule,
