@@ -36,6 +36,7 @@ let routes = [
     BrowserModule,
     //AppRoutingModule
       HttpClientModule,
+      FormsModule,
       RouterModule.forRoot(routes, {
           useHash: true,
           enableTracing: false
