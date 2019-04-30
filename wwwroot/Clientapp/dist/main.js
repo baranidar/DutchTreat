@@ -334,7 +334,12 @@ var DataService = /** @class */ (function () {
     };
     DataService.prototype.checkout = function () {
         var _this = this;
-        return this.http.post("/api/orders", this.order)
+        if (!this.order.orderNumber) {
+            this.order.orderNumber = this.order.orderDate.getFullYear().toString() + this.order.orderDate.getTime().toString();
+        }
+        return this.http.post("/api/orders", this.order, {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().set("Authorization", "Bearer " + this.token)
+        })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (response) {
             _this.order = new _order__WEBPACK_IMPORTED_MODULE_4__["Order"]();
             return true;

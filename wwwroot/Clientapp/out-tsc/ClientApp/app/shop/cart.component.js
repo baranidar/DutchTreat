@@ -6,13 +6,15 @@ var cartComponent = /** @class */ (function () {
     function cartComponent(data, router) {
         this.data = data;
         this.router = router;
+    }
+    cartComponent.prototype.onCheckout = function () {
         if (this.data.loginRequired) {
             this.router.navigate(["login"]);
         }
         else {
             this.router.navigate(["checkout"]);
         }
-    }
+    };
     cartComponent = tslib_1.__decorate([
         Component({
             selector: 'the-cart',

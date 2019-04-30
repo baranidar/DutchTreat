@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router';
 import { shopComponent } from './shop/shop.component';
 import { Checkout } from './checkout/checkout.component';
 import { loginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 var routes = [
     { path: "", component: shopComponent },
     { path: "checkout", component: Checkout },
@@ -35,6 +36,7 @@ var AppModule = /** @class */ (function () {
                 BrowserModule,
                 //AppRoutingModule
                 HttpClientModule,
+                FormsModule,
                 RouterModule.forRoot(routes, {
                     useHash: true,
                     enableTracing: false

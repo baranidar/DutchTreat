@@ -1,5 +1,5 @@
 import * as tslib_1 from "tslib";
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
 import * as OrderNS from './order';
@@ -25,6 +25,29 @@ var DataService = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    DataService.prototype.login = function (creds) {
+        var _this = this;
+        return this.http
+            .post("/account/createtoken", creds)
+            .pipe(map(function (data) {
+            _this.token = data.token;
+            _this.tokenExpiration = data.expiration;
+            return true;
+        }));
+    };
+    DataService.prototype.checkout = function () {
+        var _this = this;
+        if (!this.order.orderNumber) {
+            this.order.orderNumber = this.order.orderDate.getFullYear().toString() + this.order.orderDate.getTime().toString();
+        }
+        return this.http.post("/api/orders", this.order, {
+            headers: new HttpHeaders().set("Authorization", "Bearer " + this.token)
+        })
+            .pipe(map(function (response) {
+            _this.order = new OrderNS.Order();
+            return true;
+        }));
+    };
     DataService.prototype.addToOrder = function (newProduct) {
         var item = this.order.items.find(function (i) { return i.productId == newProduct.id; });
         if (item) {
