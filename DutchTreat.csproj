@@ -21,6 +21,7 @@
    <None Remove="ClientApp\app\shop\productList.component.css" />
    <None Remove="ClientApp\app\shop\productList.component.html" />
    <None Remove="ClientApp\app\shop\shop.component.html" />
+   <None Remove="gulpfile.js" />
  </ItemGroup>
 
  <ItemGroup>
@@ -29,6 +30,9 @@
    <Content Include="ClientApp\app\shop\productList.component.html" />
    <Content Include="ClientApp\app\shop\cart.component.html" />
    <Content Include="ClientApp\app\shop\productList.component.css">
+     <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+   </Content>
+   <Content Include="gulpfile.js">
      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
    </Content>
  </ItemGroup>
